@@ -28,27 +28,34 @@ public class BookManagement {
             switch (choice) {
                 case 1:
                     addNewBooks(scanner);
+                    System.out.println();
                     break;
                 case 2:
                     displayAllBooks();
+                    System.out.println();
                     break;
                 case 3:
                     sortBooks();
+                    System.out.println();
                     break;
                 case 4:
                     deleteBook(scanner);
+                    System.out.println();
                     break;
                 case 5:
                     searchBooks(scanner);
+                    System.out.println();
                     break;
                 case 6:
                     editBook(scanner);
+                    System.out.println();
                     break;
                 case 7:
                     System.out.println("Thoát khỏi chương trình.");
                     break;
                 default:
                     System.out.println("Lựa chọn của bạn không hợp lệ. Vui lòng chọn lại từ (1-7).");
+                    System.out.println();
             }
         } while (choice != 7);
     }
@@ -71,7 +78,6 @@ public class BookManagement {
             }
             System.out.println("Đã thêm " + numBooks + " sách thành công");
         }
-        System.out.println();
     }
 
     /*Hiển thị sách trong kho*/
@@ -85,7 +91,6 @@ public class BookManagement {
                 System.out.println();
             }
         }
-        System.out.println();
     }
 
     /*Sắp xếp lợi nhuận tăng dần*/
@@ -104,7 +109,6 @@ public class BookManagement {
             }
             System.out.println("Đã sắp xếp lợi nhuận tăng dần");
         }
-        System.out.println();
     }
 
     /*Xóa sách theo ID*/
@@ -130,10 +134,9 @@ public class BookManagement {
                 }
                 arrBook[bookCount-1] = null;
                 bookCount--;
-                System.out.println(" Sách có mã " + bookId + " đã xoá thành công.");
+                System.out.println("Sách có mã " + bookId + " đã xoá thành công.");
             }
         }
-        System.out.println();
     }
 
     /*Tìm kiếm sách theo tên hoặc mô tả*/
@@ -166,7 +169,6 @@ public class BookManagement {
                 System.out.println("Không có sách phù hợp với truy vấn tìm kiếm.");
             }
         }
-        System.out.println();
     }
 
     /*Thay đổi thông tin theo mã sách*/
@@ -194,9 +196,8 @@ public class BookManagement {
                 boolean checkStatus = Boolean.parseBoolean(scanner.nextLine());
                 arrBook[bookIndex].setBookStatus(checkStatus);
 
-                System.out.println("Thông tin sách sửa đổi thành công.");
+                System.out.println("\nThông tin sách sửa đổi thành công.");
             }
         }
-        System.out.println();
     }
 }
